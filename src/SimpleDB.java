@@ -30,7 +30,7 @@ public class SimpleDB {
             System.out.println("* 'write'");
             System.out.println("* 'read'");
             System.out.println("* 'exit'");
-
+ 
             String input = getUserInput("", sc);
 
             if (input.equals("write")) {
