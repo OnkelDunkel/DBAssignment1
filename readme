@@ -1,5 +1,0 @@
-Go to /src.
-Run below commands.
-
-docker build -t assignment1 .
-docker run -ti assignment1
