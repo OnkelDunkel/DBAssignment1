@@ -1,3 +1,5 @@
+
+
 import java.io.EOFException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -135,8 +137,12 @@ public class SimpleDB {
 
     private static String getUserInput(String msg, Scanner scanner){
         System.out.println(msg);
-        scanner.hasNextLine();
-        String theLine = scanner.nextLine();
+        String theLine = "";
+        boolean hasNewLine = false;
+        while (!hasNewLine) {
+            hasNewLine = scanner.hasNextLine();
+        }
+        theLine = scanner.nextLine();
         if (theLine.contains("\n") || theLine.isBlank()) {
             System.out.println("-Invalid input. Try again");
             return getUserInput(msg, scanner);
